@@ -2,9 +2,9 @@ package uber.kautilya.interfaces;
 
 public interface InterfaceA {
     /**
-     * private int a=3; // The private access specifier is NOT allowed in interfaces
+     * private int a=3;
+     * The private access specifier is NOT allowed in interfaces
      * Implicitly, members are public static final in an interface
-     * Similarly, methods are public
     */
     public static final int a = 3;
 
@@ -15,6 +15,9 @@ public interface InterfaceA {
         //body
     }
 
+    /**
+     * Methods are public abstract implicitly in an interface
+     */
     public void methodB();
 
     /**
