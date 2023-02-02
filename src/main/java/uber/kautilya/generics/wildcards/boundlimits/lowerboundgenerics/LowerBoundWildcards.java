@@ -1,14 +1,15 @@
-package uber.kautilya.generics.wildcards.boundlimits;
+package uber.kautilya.generics.wildcards.boundlimits.lowerboundgenerics;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class UpperBoundWildcards {
+public class LowerBoundWildcards {
     public static void main(String[] args) {
 
         List<Integer> intList = new ArrayList<>();
         intList.add(1);
         intList.add(2);
+
         List<Double> doubleList = new ArrayList<>();
         doubleList.add(1.00);
         doubleList.add(2.00);
@@ -19,7 +20,7 @@ public class UpperBoundWildcards {
      * List<Number> numberList as parameter will not permit Integer lists -
      * inheritance of generics works differently
      * '? extends Number' ensures will take in only list of types which extends Number type
-     * Only allows reading from this generic List
+     * Only allows reading from the generic list
      * @param numberList - the list to be printed
      */
     private static void printNumbers(List<? extends Number> numberList) {

@@ -1,4 +1,4 @@
-package uber.kautilya.generics.wildcards.boundlimits.mutipletypeparams;
+package uber.kautilya.generics.wildcards.boundlimits.upperboundgenerics;
 
 import java.util.Date;
 import java.util.HashMap;
