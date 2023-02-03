@@ -3,6 +3,7 @@ package uber.kautilya.generics.wildcards.boundlimits.lowerboundgenerics;
 import java.util.ArrayList;
 import java.util.List;
 
+
 public class LowerBoundWildcards {
     public static void main(String[] args) {
 
@@ -14,6 +15,23 @@ public class LowerBoundWildcards {
         doubleList.add(1.00);
         doubleList.add(2.00);
         printNumbers(doubleList);
+
+        List<Number> numberList = new ArrayList<Number>();
+        addToList(numberList, 10);
+        addToList(numberList, 20.00);
+        numberList.stream().forEach(System.out::println);
+    }
+
+    /**
+     * This is the lower bound -> Any class which is the super class of Number
+     * By this, we signal that we want to permit write operations
+     * PECS -> Generic that is a Producer Extends, Consumer Super
+     * @param numberList
+     * @param value
+     */
+    private static void addToList(List<? super Number> numberList, Number value) {
+        //Here consuming value -> Hence ? super Number
+        numberList.add(value);
     }
 
     /**

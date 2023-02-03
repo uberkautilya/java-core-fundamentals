@@ -9,8 +9,10 @@ public class TypeErasureAtRuntimeExample {
         addNames(names, "Name 1");
         addNames(names, "Name 2");
         System.out.println(names);
-        //Parameterized type information is not available on the instance, only on the variable
-        //Within the incorrectAddToNames(), it uses a different variable
+        /*
+        Parameterized type information is not available on the instance, only on the variable
+        Within the incorrectAddToNames(), it uses a different variable
+        */
         incorrectAddToNames(names, 100);
         System.out.println(names);
         //The int at ordinal 2 cannot be cast to a String: RuntimeException
@@ -27,8 +29,10 @@ public class TypeErasureAtRuntimeExample {
     }
 
     private static void incorrectAddToNames(List namesCopy, int intVal) {
-        //The list instance doesn't hold information of the parameterized type.
-        //It is available only on the original variable
+        /*
+        The list instance doesn't hold information of the parameterized type.
+        It is available only on the original variable
+        */
         namesCopy.add(intVal);
     }
 
